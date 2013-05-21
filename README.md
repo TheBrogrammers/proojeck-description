@@ -20,8 +20,11 @@ GOAL:
 --------------------
 
 The Brogrammers are attempting to create a Pac-Man-type game, with a mix of a Mario Party "3 vs 1" minigame.
+
 The game contains 4 players, 1 player is the "Pac-Man" and runs around and gets points. 
+
 The other three players must actively try to apprehend the "Pac-Man" and chase him around the screen.
+
 The point of the game is for the "Pac-Man" to survive for as long as possible.
 
 Sub-Goals:
