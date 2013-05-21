@@ -9,9 +9,13 @@ The positions:
 --------------------
 
 **Code Monkey** = Francis Pastor, Kevin Dynda
+
 **Project Manager** = Francis Pastor
+
 **Graphics** =  Josh Gruber, Lee Sport
+
 **UI designer** = Kevin Dynda
+
 **Quality Assurance** = Lee Sport
 
 We will work as a team to make the best game that the four of us can create.
@@ -29,10 +33,15 @@ The point of the game is for the "Pac-Man" to survive for as long as possible.
 
 Sub-Goals:
 --------------------
+
 -The ghosts/apprehenders are slower than the main player.
+
 -Four-player functionality with keys on one keyboard.
+
 -Avatar/player-selection in game
+
 -Highscore system
+
 -Power-ups
 
 Lee Sport's face is going to represent Pac-Man.
