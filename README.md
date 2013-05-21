@@ -5,7 +5,7 @@ Exactly
 
 This is going to be the project description for The Brogrammers
 
-**The positions**:
+The positions:
 --------------------
 
 **Code Monkey** = Francis Pastor, Kevin Dynda
@@ -16,7 +16,7 @@ This is going to be the project description for The Brogrammers
 
 We will work as a team to make the best game that the four of us can create.
 
-**GOAL**:
+GOAL:
 --------------------
 
 The Brogrammers are attempting to create a Pac-Man-type game, with a mix of a Mario Party "3 vs 1" minigame.
@@ -24,7 +24,7 @@ The game contains 4 players, 1 player is the "Pac-Man" and runs around and gets 
 The other three players must actively try to apprehend the "Pac-Man" and chase him around the screen.
 The point of the game is for the "Pac-Man" to survive for as long as possible.
 
-**Sub-Goals:**
+Sub-Goals:
 --------------------
 -The ghosts/apprehenders are slower than the main player.
 -Four-player functionality with keys on one keyboard.
