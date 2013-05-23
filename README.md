@@ -28,8 +28,10 @@ Sub-Goals:
 
 -The ghosts/apprehenders are slower than the main player.  
 -Four-player functionality with keys on one keyboard.  
--Avatar/player-selection in game.  
--Highscore system  
+-Avatar/player-selection in game.
+-A modification of the original board will be made to travel through the screen.
+-Highscore system
+-5 lives will be given to the "Lee Sport" character 
 -Power-ups
 
 Lee Sport's face is going to represent Pac-Man.
