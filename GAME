@@ -62,3 +62,18 @@ class Timer {
     }
   }
 }
+class sizePowerUp{
+  float x;
+  float y;
+  float d;
+  sizePowerUp(){
+    x=random(width-d/2);
+    y=random(height-d/2);
+    d=25;
+  }
+  void display(){
+    noStroke();
+    fill(0,0,random(255));
+    ellipse(x,y,d,d);
+  }
+}
