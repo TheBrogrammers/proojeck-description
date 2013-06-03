@@ -77,3 +77,18 @@ class sizePowerUp{
     ellipse(x,y,d,d);
   }
 }
+class speedPowerUp {
+  float x;
+  float y;
+  float d;
+  speedPowerUp() {
+    x=random(width-d/2);
+    y=random(height-d/2);
+    d=20;
+  }
+  void display() {
+    noStroke();
+    fill(random(255), 120, 0);
+    ellipse(x, y, d, d);
+  }
+}
