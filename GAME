@@ -1,6 +1,7 @@
 Player play;
 void setup(){
-  size(500,500);
+  size(500,500); 
+    BlackBox.init(this);
   play = new Player();
 }
 void draw(){
