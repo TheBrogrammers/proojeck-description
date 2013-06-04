@@ -67,7 +67,7 @@ class Enemy1{
   float x;
   float y;
   float d;
-  Player() {
+  Enemy1() {
     x=0;
     y=0;
     d=100;
@@ -98,7 +98,7 @@ class Enemy2{
   float x;
   float y;
   float d;
-  Player() {
+  Enemy2() {
     x=0;
     y=0;
     d=100;
@@ -129,7 +129,7 @@ class Enemy3{
   float x;
   float y;
   float d;
-  Player() {
+  Enemy3() {
     x=0;
     y=0;
     d=100;
