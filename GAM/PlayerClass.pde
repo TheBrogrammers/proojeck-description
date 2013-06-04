@@ -22,7 +22,7 @@ class Player{
     fill(0);
     ellipse(x, y, d, d);
   }
-  void move() {
+ void move() {
     if(keyPressed){
       if(key=='6'){
         x+=5;
@@ -30,12 +30,29 @@ class Player{
       if(key=='4'){
         x-=5;
       }
-      if(key=='5'){
+      if(key=='2'){
         y+=5;
       }
       if(key=='8'){
         y-=5;
       }
+      if(key == '1'){
+        x-=5;
+        y+=5;
+      }
+      if(key == '3'){
+        x+=5;
+        y+=5;
+      }
+      if(key == '7'){
+        x-=5;
+        y-=5;
+      }
+      if(key == '9'){
+        x+=5;
+        y-=5;
+      }
+      
     }
   }
 }
