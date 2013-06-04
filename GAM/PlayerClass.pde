@@ -1,6 +1,6 @@
 Player play;
 void setup(){
-  size(500,500);
+  size(1000,1000);
   play = new Player();
 }
 void draw(){
@@ -52,7 +52,6 @@ class Player{
         x+=5;
         y-=5;
       }
-      
     }
   }
 }
