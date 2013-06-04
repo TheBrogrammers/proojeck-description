@@ -63,6 +63,99 @@ class Player{
     }
   }
 }
+class Enemy1{
+  float x;
+  float y;
+  float d;
+  Player() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+    if(keyPressed){
+      if(key=='d'){
+        x+=5;
+      }
+      if(key=='a'){
+        x-=5;
+      }
+      if(key=='s'){
+        y+=5;
+      }
+      if(key=='w'){
+        y-=5;
+      }
+    }
+  }
+}
+class Enemy2{
+  float x;
+  float y;
+  float d;
+  Player() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+    if(keyPressed){
+      if(key=='h'){
+        x+=5;
+      }
+      if(key=='f'){
+        x-=5;
+      }
+      if(key=='g'){
+        y+=5;
+      }
+      if(key=='t'){
+        y-=5;
+      }
+    }
+  }
+}
+class Enemy3{
+  float x;
+  float y;
+  float d;
+  Player() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+    if(keyPressed){
+      if(key=='l'){
+        x+=5;
+      }
+      if(key=='j'){
+        x-=5;
+      }
+      if(key=='k'){
+        y+=5;
+      }
+      if(key=='i'){
+        y-=5;
+      }
+    }
+  }
+}
 class Timer {
   int time;
   int currentTime;
