@@ -4,7 +4,13 @@ void setup(){
   play = new Player();
 }
 void draw(){
-  background(255);
+  background(255);  
+  
+   if (BlackBox.isKeyDown(BlackBox.VK_NUMPAD4) && BlackBox.isKeyDown(BlackBox.VK_NUMPAD5)) {
+           println("Both the '4' key and the '5' key are pressed!");
+  }  
+  
+  
   play.display();
   play.move();
 }
