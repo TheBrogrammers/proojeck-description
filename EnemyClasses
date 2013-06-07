@@ -1,0 +1,94 @@
+class Enemy1{
+  float x;
+  float y;
+  float d;
+  Enemy1() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+   
+      if(BlackBox.isKeyDown(BlackBox.VK_A)){
+        x-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_W)){
+       y-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_S)){
+      y+=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_D)){
+      x+=2;
+      }
+      
+     
+    }
+  }  
+
+class Enemy2{
+  float x;
+  float y;
+  float d;
+ Enemy2() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+       if(BlackBox.isKeyDown(BlackBox.VK_F)){
+        x-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_T)){
+       y-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_G)){
+      y+=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_H)){
+      x+=2;
+      }
+      
+  }
+}  
+
+class Enemy3{
+  float x;
+  float y;
+  float d;
+ Enemy3() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+     if(BlackBox.isKeyDown(BlackBox.VK_J)){
+        x-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_I)){
+       y-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_K)){
+      y+=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_L)){
+      x+=2;
+      }
+      
+  }
+}  
