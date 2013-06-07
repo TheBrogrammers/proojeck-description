@@ -12,37 +12,21 @@ class Player{
     fill(0);
     ellipse(x, y, d, d);
   }
-  void move() {
-    if(keyPressed){
-      if(key=='6'){
-        x+=5;
-      }
-      if(key=='4'){
+void move() {
+        if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD4)){
         x-=5;
       }
-      if(key=='2'){
-        y+=5;
+      if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD8)){
+       y-=5;
       }
-      if(key=='8'){
-        y-=5;
+      if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD5)){
+      y+=5;
       }
-      if(key == '1'){
-        x-=5;
-        y+=5;
+      if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD6)){
+      x+=5;
       }
-      if(key == '3'){
-        x+=5;
-        y+=5;
-      }
-      if(key == '7'){
-        x-=5;
-        y-=5;
-      }
-      if(key == '9'){
-        x+=5;
-        y-=5;
-      }
+      
       
     }
   }
-}
+
