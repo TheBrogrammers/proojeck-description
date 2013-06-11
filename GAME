@@ -1,0 +1,239 @@
+Player play;
+Enemy1 chaser1;
+Enemy2 chaser2;
+Enemy3 chaser3;
+void setup(){
+  size(500,500); 
+    BlackBox.init(this);
+  play = new Player();
+  chaser1 = new Enemy1();
+  chaser2 = new Enemy2();
+  chaser3 = new Enemy3();
+}
+void draw(){
+  background(255);  
+  
+   if (BlackBox.isKeyDown(BlackBox.VK_NUMPAD4) && BlackBox.isKeyDown(BlackBox.VK_NUMPAD5)) {
+           println("Both the '4' key and the '5' key are pressed!");
+  }  
+  
+  
+  play.display();
+  play.move();
+  play.checkenemy1(chaser1);
+  play.checkenemy2(chaser2);
+  play.checkenemy3(chaser3);
+  chaser1.display();
+  chaser1.move();
+  chaser2.display();
+  chaser2.move();
+  chaser3.display();
+  chaser3.move();
+}  
+
+class Player{
+  float x;
+  float y;
+  float xspeed;
+  float yspeed;
+  float d;
+  Player() {
+    x=0;
+    y=0;
+    xspeed=0;
+    yspeed=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+      x+=xspeed
+      y+=yspeed
+      if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD4)){
+      xspeed-=5;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD8)){
+      yspeed-=5;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD5)){
+      yspeed+=5;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_NUMPAD6)){
+      xspeed+=5;
+      }
+  }
+  void checksizepowerup(sizePowerUp s){
+    if(dist(x,y,s.x,s.y)<(d/2+s.d/2)){
+      d-=10;
+    }  
+  }
+  void checkspeedpowerup(speedPowerUp s){
+    if(dist(x,y,s.x,s.y)<(d/2+s.d/2)){
+      xspeed*=2;
+      yspeed*=2;
+    }
+  }
+  void checkenemy1(Enemy1 e){
+    if(dist(x,y,e.x,e.y)<(d/2+e.d/2){
+      gameover==true;
+    }
+  }
+  void checkenemy2(Enemy2 e){
+    if(dist(x,y,e.x,e.y)<(d/2+e.d/2){
+      gameover==true;
+    }  
+  }
+  void checkenemy3(Enemy3 e){
+    if(dist(x,y,e.x,e.y)<(d/2+e.d/2){
+      gameover==true;
+    }
+  }  
+} 
+  
+class Enemy1{
+  float x;
+  float y;
+  float d;
+  Enemy1() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+   
+      if(BlackBox.isKeyDown(BlackBox.VK_A)){
+        x-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_W)){
+       y-=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_S)){
+      y+=2;
+      }
+      if(BlackBox.isKeyDown(BlackBox.VK_D)){
+      x+=2;
+      }
+    }
+  }  
+  
+class Enemy2 {
+  float x;
+  float y;
+  float d;
+  Enemy2() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+    if (BlackBox.isKeyDown(BlackBox.VK_F)) {
+      x-=2;
+    }
+    if (BlackBox.isKeyDown(BlackBox.VK_T)) {
+      y-=2;
+    }
+    if (BlackBox.isKeyDown(BlackBox.VK_G)) {
+      y+=2;
+    }
+    if (BlackBox.isKeyDown(BlackBox.VK_H)) {
+      x+=2;
+    }
+  }
+}  
+
+class Enemy3 {
+  float x;
+  float y;
+  float d;
+  Enemy3() {
+    x=0;
+    y=0;
+    d=100;
+  }
+  void display() {
+    noStroke();
+    fill(0);
+    ellipse(x, y, d, d);
+  }
+  void move() {
+    if (BlackBox.isKeyDown(BlackBox.VK_J)) {
+      x-=2;
+    }
+    if (BlackBox.isKeyDown(BlackBox.VK_I)) {
+      y-=2;
+    }
+    if (BlackBox.isKeyDown(BlackBox.VK_K)) {
+      y+=2;
+    }
+    if (BlackBox.isKeyDown(BlackBox.VK_L)) {
+      x+=2;
+    }
+  }
+}  
+
+class Timer {
+  int time;
+  int currentTime;
+  int oldTime;
+  Timer(int time_) {
+    time=time_;
+    currentTime=millis();
+    oldTime=0;
+  }
+  void update() {
+    currentTime=millis();
+  }
+  boolean checkTime() {
+    currentTime=millis();  
+    if (currentTime-oldTime>=time) {
+      oldTime=currentTime;
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+}
+class sizePowerUp{
+  float x;
+  float y;
+  float d;
+  sizePowerUp(){
+    x=random(width-d/2);
+    y=random(height-d/2);
+    d=25;
+  }
+  void display(){
+    noStroke();
+    fill(0,0,random(255));
+    ellipse(x,y,d,d);
+  }
+}
+class speedPowerUp {
+  float x;
+  float y;
+  float d;
+  speedPowerUp() {
+    x=random(width-d/2);
+    y=random(height-d/2);
+    d=20;
+  }
+  void display() {
+    noStroke();
+    fill(random(255), 120, 0);
+    ellipse(x, y, d, d);
+  }
+}
